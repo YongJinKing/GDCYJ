@@ -25,11 +25,11 @@
 <div id="unityContainer"></div>
 
 <script>
-    var buildUrl = ""; // Unity 빌드 파일 경로
+    
     var config = {
-        dataUrl:  "WebGl/Build/WebGl.data",
-        frameworkUrl:  "WebGl/Build/WebGl.framework.js",
-        codeUrl:  "WebGl/Build/WebGl.wasm",
+        dataUrl:  "Build/WebGl.data",
+        frameworkUrl:  "Build/WebGl.framework.js",
+        codeUrl:  "Build/WebGl.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Pexplorer",
         productName: "YongJinCha",
@@ -38,7 +38,7 @@
 
     var container = document.querySelector("#unityContainer");
     var script = document.createElement("script");
-    script.src = "WebGl/Build/WebGl.loader.js";
+    script.src = "Build/WebGl.loader.js";
     script.onload = () => {
         createUnityInstance(container, config, (progress) => {
             console.log("Loading progress: " + progress * 100 + "%");
